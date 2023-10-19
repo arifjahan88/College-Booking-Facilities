@@ -32,8 +32,6 @@ const Admission = () => {
   };
 
   const onSubmit = (data) => {
-    setIsopen(false);
-
     const formData = {
       name: data.name,
       email: data.email,
@@ -52,7 +50,10 @@ const Admission = () => {
       },
       body: JSON.stringify(formData),
     })
-      .then((res) => res.json())
+      .then((res) => {
+        res.json();
+        setIsopen(false);
+      })
       .then((data) => {
         console.log(data);
       });

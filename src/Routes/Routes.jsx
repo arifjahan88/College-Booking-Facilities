@@ -47,7 +47,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/mycollage",
-        element: <MyCollage />,
+        element: (
+          <Privateroutes>
+            <MyCollage />
+          </Privateroutes>
+        ),
       },
       {
         path: "/signin",
@@ -57,6 +61,7 @@ export const routes = createBrowserRouter([
         path: "/signup",
         element: <Signup />,
       },
+
       {
         path: "*",
         element: <div>Not Found</div>,

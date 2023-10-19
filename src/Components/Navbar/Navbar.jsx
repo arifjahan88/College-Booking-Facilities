@@ -31,9 +31,10 @@ const Navbar = () => {
           My Collage
         </Link>
       </div>
-      <div className="flex gap-5 ">
+      <div className="flex gap-5 items-center">
         {user?.uid ? (
           <>
+            <h1 className="font-bold text-orange-600">{user?.displayName}</h1>
             <button
               onClick={handlelogout}
               className="rounded-md p-2 bg-orange-100 hover:bg-green-300 duration-500 "
