@@ -19,7 +19,7 @@ const Collages = () => {
       });
   }, []);
   return (
-    <section className="container mx-auto lg:px-16 md:px-10 px-5 py-10">
+    <section className="container mx-auto lg:px-16 md:px-10 px-5 pb-10">
       <form className="w-full">
         <input
           onChange={(e) => setsearch(e.target.value)}

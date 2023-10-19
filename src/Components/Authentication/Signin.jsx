@@ -97,7 +97,7 @@ const Signin = () => {
               </button>
             </form>
             <div className="text-center">
-              <Link to="forgetpassword" className="py-1 text-slate-500  border-b">
+              <Link to="/forgetpassword" className="py-1 text-slate-500  border-b">
                 <small>Forget Password</small>
               </Link>
             </div>

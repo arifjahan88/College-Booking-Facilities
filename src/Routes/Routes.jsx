@@ -9,6 +9,7 @@ import MyCollage from "../Components/MyCollage/MyCollage";
 import Signin from "../Components/Authentication/Signin";
 import Signup from "../Components/Authentication/Signup";
 import Privateroutes from "./PrivateRoutes";
+import PasswordReset from "../Components/Authentication/PasswordReset";
 
 export const routes = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ export const routes = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup />,
+      },
+      {
+        path: "/forgetpassword",
+        element: <PasswordReset />,
       },
 
       {

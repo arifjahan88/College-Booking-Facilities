@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import app from "../Firebase/Firebase.config";
@@ -11,6 +12,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+export const database = getAuth(app);
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -63,6 +65,7 @@ const AuthProvider = ({ children }) => {
     user,
     loading,
     googleSignin,
+    database,
   };
   return <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>;
 };
