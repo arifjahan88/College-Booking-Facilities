@@ -5,14 +5,12 @@ import { Link } from "react-router-dom";
 const Collages = () => {
   const [search, setsearch] = useState("");
   const [collagesdata, setcollagesdata] = useState([]);
-  console.log(collagesdata);
 
   useEffect(() => {
     axios
       .get("http://localhost:5000/collagedata")
       .then((res) => {
         setcollagesdata(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);

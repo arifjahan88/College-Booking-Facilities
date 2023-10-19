@@ -40,7 +40,6 @@ const Admission = () => {
       subject: data.subject,
       photo: data.photo,
     };
-    console.log(formData);
 
     // Save Form Data to database
     fetch("http://localhost:5000/applydata", {

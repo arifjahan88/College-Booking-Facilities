@@ -10,7 +10,6 @@ const Collages_Route = () => {
       .get("http://localhost:5000/collageroute")
       .then((response) => {
         setData(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);

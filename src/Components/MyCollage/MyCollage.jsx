@@ -16,7 +16,6 @@ const MyCollage = () => {
     setIsopen(false);
   };
   const onSubmit = (data) => {
-    console.log(data);
     const formData = {
       name: data.name,
       email: data.email,
@@ -31,17 +30,12 @@ const MyCollage = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    })
-      .then((res) => {
-        res.json();
-        setIsopen(false);
-      })
-      .then((data) => {
-        console.log(data);
-      });
+    }).then((res) => {
+      res.json();
+      setIsopen(false);
+    });
   };
 
-  console.log(collagedata);
   useEffect(() => {
     axios
       .get("http://localhost:5000/applydata")
