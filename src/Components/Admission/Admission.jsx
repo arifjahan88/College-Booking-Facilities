@@ -79,10 +79,10 @@ const Admission = () => {
       {isopen && (
         <>
           <div className="fixed z-40 inset-0 ">
-            <div className="flex items-center justify-center h-full bg-primary bg-opacity-25 backdrop-blur-3xl">
+            <div className="flex items-center justify-center h-full bg-primary bg-opacity-25 backdrop-blur-3xl backdrop-saturate-150">
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="mt-8 w-full container mx-auto lg:px-32 md:px-16 px-10 bg-white"
+                className="mt-8 w-full container mx-auto lg:px-32 md:px-16 px-10"
               >
                 {/* name and email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-5">

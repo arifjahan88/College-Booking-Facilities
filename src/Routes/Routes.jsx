@@ -6,6 +6,9 @@ import Collages_Route from "../Components/Collages_Route/Collages_Route";
 import CollageRoute_Details from "../Components/Collages_Route/CollageRoute_Details";
 import Admission from "../Components/Admission/Admission";
 import MyCollage from "../Components/MyCollage/MyCollage";
+import Signin from "../Components/Authentication/Signin";
+import Signup from "../Components/Authentication/Signup";
+import Privateroutes from "./PrivateRoutes";
 
 export const routes = createBrowserRouter([
   {
@@ -18,7 +21,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/collagedetails/:id",
-        element: <CollageDetails />,
+        element: (
+          <Privateroutes>
+            <CollageDetails />
+          </Privateroutes>
+        ),
         loader: ({ params }) => fetch(`http://localhost:5000/collagedata/${params.id}`),
       },
       {
@@ -27,7 +34,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/collages/collagedetails/:id",
-        element: <CollageRoute_Details />,
+        element: (
+          <Privateroutes>
+            <CollageRoute_Details />
+          </Privateroutes>
+        ),
         loader: ({ params }) => fetch(`http://localhost:5000/collageroute/${params.id}`),
       },
       {
@@ -37,6 +48,14 @@ export const routes = createBrowserRouter([
       {
         path: "/mycollage",
         element: <MyCollage />,
+      },
+      {
+        path: "/signin",
+        element: <Signin />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
       },
       {
         path: "*",

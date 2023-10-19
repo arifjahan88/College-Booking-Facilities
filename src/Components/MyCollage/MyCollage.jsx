@@ -23,11 +23,15 @@ const MyCollage = () => {
             key={item._id}
           >
             <img src={item.photo} alt="" />
-            <h2>{item.name}</h2>
+            <h2 className="text-xl font-bold text-orange-600">{item.name}</h2>
             <h2>{item.subject}</h2>
             <p>{item.email}</p>
-            <p>{item.date}</p>
-            <p>{item.phone}</p>
+            <p>
+              <small>{item.date}</small>
+            </p>
+            <p>
+              <small>{item.phone}</small>
+            </p>
             <button className="rounded-xl p-2 bg-orange-100 hover:bg-green-300 duration-500 mt-3">
               Review
             </button>
