@@ -7,7 +7,7 @@ const Collages_Route = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/collageroute")
+      .get("https://college-booking-facilities-server-two.vercel.app/collageroute")
       .then((response) => {
         setData(response.data);
       })

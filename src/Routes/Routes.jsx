@@ -27,7 +27,10 @@ export const routes = createBrowserRouter([
             <CollageDetails />
           </Privateroutes>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/collagedata/${params.id}`),
+        loader: ({ params }) =>
+          fetch(
+            `https://college-booking-facilities-server-two.vercel.app/collagedata/${params.id}`
+          ),
       },
       {
         path: "/collages",
@@ -40,7 +43,10 @@ export const routes = createBrowserRouter([
             <CollageRoute_Details />
           </Privateroutes>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/collageroute/${params.id}`),
+        loader: ({ params }) =>
+          fetch(
+            `https://college-booking-facilities-server-two.vercel.app/collageroute/${params.id}`
+          ),
       },
       {
         path: "/admission",
