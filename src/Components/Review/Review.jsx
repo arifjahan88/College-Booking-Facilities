@@ -5,7 +5,7 @@ const Review = () => {
   const [reviewData, setreviewData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://college-booking-facilities-server-two.vercel.app/review")
+      .get("project-task-server-lemon.vercel.app/review")
       .then((res) => {
         setreviewData(res.data);
       })

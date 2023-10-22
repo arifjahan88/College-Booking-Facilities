@@ -42,7 +42,7 @@ const Admission = () => {
     };
 
     // Save Form Data to database
-    fetch("https://college-booking-facilities-server-two.vercel.app/applydata", {
+    fetch("project-task-server-lemon.vercel.app/applydata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

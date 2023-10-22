@@ -8,7 +8,7 @@ const Collages = () => {
 
   useEffect(() => {
     axios
-      .get("https://college-booking-facilities-server-two.vercel.app/collagedata")
+      .get("project-task-server-lemon.vercel.app/collagedata")
       .then((res) => {
         setcollagesdata(res.data);
       })
