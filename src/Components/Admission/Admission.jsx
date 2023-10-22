@@ -48,14 +48,10 @@ const Admission = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    })
-      .then((res) => {
-        res.json();
-        setIsopen(false);
-      })
-      .then((data) => {
-        console.log(data);
-      });
+    }).then((res) => {
+      res.json();
+      setIsopen(false);
+    });
   };
   return (
     <div className="container mx-auto lg:px-16 md:px-10 px-5 py-10">

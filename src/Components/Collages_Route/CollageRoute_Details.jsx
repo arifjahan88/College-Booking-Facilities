@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const CollageRoute_Details = () => {
   const data = useLoaderData();
+  console.log(data);
   return (
     <div className="m-2 p-5 rounded-2xl container mx-auto lg:px-16 md:px-10 px-5">
       <img className="rounded-2xl opacity-90" src={data.image} alt="Image_Box" />

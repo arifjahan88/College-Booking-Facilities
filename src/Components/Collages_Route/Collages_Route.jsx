@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Collages_Route = () => {
   const [data, setData] = useState([]);
+  console.log(data);
   useEffect(() => {
     axios
       .get("https://college-booking-facilities-server-two.vercel.app/collageroute")
@@ -20,7 +21,7 @@ const Collages_Route = () => {
     <div className="container mx-auto lg:px-16 md:px-10 px-5 grid md:grid-cols-2 grid-cols-1">
       {data.map((data) => {
         return (
-          <div key={data.id} className="border m-2 p-5 rounded-2xl hover:bg-pink-100 duration-500">
+          <div key={data._id} className="border m-2 p-5 rounded-2xl hover:bg-pink-100 duration-500">
             <img className="rounded-2xl opacity-90" src={data.image} alt="Image_Box" />
             <h2 className="font-semibold mt-4 text-2xl">{data.collage_name}</h2>
             <div className="flex items-center">
@@ -38,7 +39,7 @@ const Collages_Route = () => {
                 <p className="font-bold">Admission Data : {data.admission_Date}</p>
                 <small>Research Number : {data.Research_number}</small>
               </div>
-              <Link to={`/collages/collagedetails/${data.id}`}>
+              <Link to={`/collages/collagedetails/${data._id}`}>
                 <button className="border m-2 rounded-xl p-2 px-4 hover:bg-green-500 hover:text-white duration-500">
                   Details
                 </button>

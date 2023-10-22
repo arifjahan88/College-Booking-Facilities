@@ -34,7 +34,7 @@ const Collages = () => {
           })
           .map((item) => (
             <div
-              key={item.id}
+              key={item._id}
               className="hover:bg-slate-100 duration-500 p-3 border rounded-lg hover:-translate-y-2"
             >
               <img className="rounded-lg w-full h-[300px]" src={item.image} alt="" />
@@ -58,7 +58,7 @@ const Collages = () => {
                     Research History : {item.research_history}
                   </a>
                 </div>
-                <Link to={`collagedetails/${item.id}`}>
+                <Link to={`collagedetails/${item._id}`}>
                   <button className="w-full rounded-xl p-3 text-lg bg-orange-100 hover:bg-green-300 duration-500 font-bold mt-3">
                     Details
                   </button>

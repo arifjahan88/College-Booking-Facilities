@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const CollageDetails = () => {
   const item = useLoaderData();
+
   return (
     <div className="p-3 grid grid-cols-3 gap-5 border-t border-b">
       <img className="rounded-lg w-full col-span-2" src={item.image} alt="" />
