@@ -24,7 +24,7 @@ const MyCollage = () => {
       review: data.review,
     };
     // Save Form Data to database
-    fetch("project-task-server-lemon.vercel.app/review", {
+    fetch("https://project-phserver.vercel.app/review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const MyCollage = () => {
 
   useEffect(() => {
     axios
-      .get("project-task-server-lemon.vercel.app/applydata")
+      .get("https://project-phserver.vercel.app/applydata")
       .then((res) => {
         setCollagedata(res.data);
       })

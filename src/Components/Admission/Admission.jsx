@@ -42,7 +42,7 @@ const Admission = () => {
     };
 
     // Save Form Data to database
-    fetch("project-task-server-lemon.vercel.app/applydata", {
+    fetch("https://project-phserver.vercel.app/applydata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

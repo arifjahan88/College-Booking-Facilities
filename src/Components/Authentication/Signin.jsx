@@ -32,9 +32,7 @@ const Signin = () => {
 
   const handlegooglelogin = () => {
     googleSignin()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .then(() => {
         reset();
         navigate("/");
       })

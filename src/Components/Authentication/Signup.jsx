@@ -33,7 +33,7 @@ const Signup = () => {
         number: data.number,
       };
 
-      const response = await fetch("project-task-server-lemon.vercel.app/users", {
+      const response = await fetch("https://project-phserver.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

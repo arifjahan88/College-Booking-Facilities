@@ -28,7 +28,7 @@ export const routes = createBrowserRouter([
           </Privateroutes>
         ),
         loader: ({ params }) =>
-          fetch(`project-task-server-lemon.vercel.app/collagedata/${params.id}`),
+          fetch(`https://project-phserver.vercel.app/collagedata/${params.id}`),
       },
       {
         path: "/collages",
@@ -42,7 +42,7 @@ export const routes = createBrowserRouter([
           </Privateroutes>
         ),
         loader: ({ params }) =>
-          fetch(`project-task-server-lemon.vercel.app/collageroute/${params.id}`),
+          fetch(`https://project-phserver.vercel.app/collageroute/${params.id}`),
       },
       {
         path: "/admission",

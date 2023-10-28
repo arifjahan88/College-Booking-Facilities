@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const Collages_Route = () => {
   const [data, setData] = useState([]);
-  console.log(data);
+
   useEffect(() => {
     axios
-      .get("project-task-server-lemon.vercel.app/collageroute")
+      .get("https://project-phserver.vercel.app/collageroute")
       .then((response) => {
         setData(response.data);
       })
